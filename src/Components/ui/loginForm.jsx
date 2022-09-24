@@ -22,7 +22,6 @@ function LoginForm({ onChangeAuth, usersList, onEmail }) {
 
     var raw = JSON.stringify({
       userName: data.userName,
-      massages: [{ massages: 'empty' }],
     });
 
     var requestOptions = {
@@ -68,7 +67,7 @@ function LoginForm({ onChangeAuth, usersList, onEmail }) {
     <form onSubmit={handleSubmit}>
       <TextField label="userName" name="userName" value={data.userName} onChange={handleChange} />
 
-      <button className="btn btn-primary w-100 mx-auto" type="submit">
+      <button className="btn btn-primary w-100 mx-auto mt-4 mb-4" type="submit">
         Submit
       </button>
       {check ? '' : <p className="text-danger">произошла ошибка заполните данные правильно</p>}
