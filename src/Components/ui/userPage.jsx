@@ -60,7 +60,6 @@ function UsersList({ listOfUsers, arrayOfUsers, idOfUsers, userEmailValue }) {
       setMassageError('Выберите кому вы хотите отправить сообщение');
     } else {
       updateData();
-      // console.log(data.select);
     }
   };
 

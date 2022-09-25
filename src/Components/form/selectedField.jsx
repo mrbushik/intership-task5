@@ -3,7 +3,6 @@ import React from 'react';
 function SelectField({ label, value, onChange, name, userEmailValue }) {
   let arrayOfUsers;
   let idOfUsers;
-  let currentUserId;
 
   const [massageList, setUsersList] = React.useState();
   React.useEffect(() => {

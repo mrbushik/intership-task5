@@ -2,7 +2,7 @@
 import React from 'react';
 import Massage from './massage';
 
-function ReseivedMessages({ massagesList, currentUserId }) {
+function ReseivedMessages({ currentUserId }) {
   const [massageList, setUsersList] = React.useState();
   React.useEffect(() => {
     handleRequest();
@@ -25,15 +25,17 @@ function ReseivedMessages({ massagesList, currentUserId }) {
   return (
     <div>
       {massageList ? (
-        Object.values(massageList).map((item, index) => (
-          <Massage
-            key={index}
-            sender={item.sender}
-            topic={item.topic}
-            sendingTime={item.sendingTime}
-            massage={item.massage}
-          />
-        ))
+        Object.values(massageList)
+          .reverse()
+          .map((item, index) => (
+            <Massage
+              key={index}
+              sender={item.sender}
+              topic={item.topic}
+              sendingTime={item.sendingTime}
+              massage={item.massage}
+            />
+          ))
       ) : (
         <p className="text-secondary opacity-50">Список сообщений пуст</p>
       )}
