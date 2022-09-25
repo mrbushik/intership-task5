@@ -3,10 +3,8 @@ import React from 'react';
 import UsersList from '../ui/userPage';
 
 function MainPage({ onChangeAuth, userEmailValue }) {
-  const pervUsersList = React.useRef('');
   const [userslist, setUsersList] = React.useState();
   React.useEffect(() => {
-    pervUsersList.current = userslist;
     handleRequest();
   }, []);
 

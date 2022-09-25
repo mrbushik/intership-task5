@@ -45,12 +45,10 @@ function LoginForm({ onChangeAuth, usersList, onEmail }) {
     let correctUserName = receivedUsers.find((item) => item.userName === data.userName);
     if (correctUserName) {
       setCheck(true);
-      console.log('этот ник есть');
       onEmail(data.userName);
       onChangeAuth(true);
     } else {
       setCheck(true);
-      console.log('этого ника нет');
       handleSubmitNowDate();
     }
   };

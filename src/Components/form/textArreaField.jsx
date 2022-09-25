@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function TextField({ label, type, name, value, onChange }) {
+function TextArreaField({ label, type, name, value, onChange }) {
   const handleChange = ({ target }) => {
     onChange({ name: target.name, value: target.value });
   };
@@ -8,17 +8,16 @@ function TextField({ label, type, name, value, onChange }) {
   return (
     <div className="mb-1">
       <div className="input-group has-validation">
-        <input
-          type="text"
+        <textarea
+          type={'text'}
           id={name}
           name={name}
           value={value}
           onChange={handleChange}
-          className={'form-control'}
-        />
+          className={'form-control'}></textarea>
       </div>
     </div>
   );
 }
 
-export default TextField;
+export default TextArreaField;
