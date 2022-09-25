@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import Massage from './massage';
 
@@ -13,9 +14,6 @@ function ReseivedMessages({ massagesList, currentUserId }) {
     }, 5000);
   }, []);
 
-  const handleUpdateUsers = () => {
-    handleRequest();
-  };
   const handleRequest = () => {
     fetch(
       `https://task5-4489d-default-rtdb.europe-west1.firebasedatabase.app/users/${currentUserId}/massages.json`,
@@ -26,7 +24,7 @@ function ReseivedMessages({ massagesList, currentUserId }) {
 
   return (
     <div>
-      {massageList &&
+      {massageList ? (
         Object.values(massageList).map((item, index) => (
           <Massage
             key={index}
@@ -35,7 +33,10 @@ function ReseivedMessages({ massagesList, currentUserId }) {
             sendingTime={item.sendingTime}
             massage={item.massage}
           />
-        ))}
+        ))
+      ) : (
+        <p className="text-secondary opacity-50">Список сообщений пуст</p>
+      )}
     </div>
   );
 }

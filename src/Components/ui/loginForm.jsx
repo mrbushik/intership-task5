@@ -8,7 +8,6 @@ function LoginForm({ onChangeAuth, usersList, onEmail }) {
     userName: '',
     massages: [],
   });
-  const [loginUserData, setLoginUserData] = React.useState([]);
   const [check, setCheck] = React.useState(true);
   const handleChange = (target) => {
     setData((prevState) => ({

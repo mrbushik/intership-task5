@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import LoginForm from '../ui/loginForm';
 
 function Login({ ...rest }) {

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function TextArreaField({ label, type, name, value, onChange }) {
+function TextArreaField({ type, name, value, onChange }) {
   const handleChange = ({ target }) => {
     onChange({ name: target.name, value: target.value });
   };
