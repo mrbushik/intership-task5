@@ -28,9 +28,7 @@ function SelectField({ label, value, onChange, name, userEmailValue }) {
       (item) => item.userName === userEmailValue,
     );
     arrayOfUsers = Object.values(massageList);
-    arrayOfUsers.splice(indexCurrentUser, 1);
     idOfUsers = Object.keys(massageList);
-    idOfUsers.splice(indexCurrentUser, 1);
   }
   return (
     <div className="mb-1">
